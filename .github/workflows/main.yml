@@ -5,10 +5,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: "Create env file"
+      - name: create env file
         run: |
           touch .env
-          echo tauko='Persona' >> .env
+          echo tauko='Apple' >> .env
         working-directory: server
 
 
