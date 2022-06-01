@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 
 const logMessage = () =>
   setInterval(() => {
-    console.log(`App running at port ${port} ------${process.env.name}`);
+    console.log(`App running at port ${port} ------${process.env.tauko}`);
   }, 5000);
 app.listen(3000, () => {
   logMessage();
