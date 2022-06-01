@@ -9,6 +9,8 @@ jobs:
         run: |
           touch .env
           echo tauko='Persona' >> .env
+        working-directory: server
+
 
       # checkout the repo
       - name: "Checkout GitHub Action"
