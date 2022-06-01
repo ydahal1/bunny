@@ -6,6 +6,10 @@ const port = 3000;
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
-app.listen(3000, () => {
+
+const logMessage = () => setInterval(() =>{
   console.log(`App running at port ${port}`);
+}, 5000)
+app.listen(3000, () => {
+   logMessage();
 });
