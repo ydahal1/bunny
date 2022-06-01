@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 });
 
 const logMessage = () => setInterval(() =>{
-  console.log(`App running at port ${port}`);
+  console.log(`App running at port ${port} ------${process.env.name}`);
 }, 5000)
 app.listen(3000, () => {
    logMessage();
