@@ -5,16 +5,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: create env file
-        run: |
-          touch .env
-          echo tauko='Apple' >> .env
-        working-directory: server
+      
 
 
       # checkout the repo
       - name: "Checkout GitHub Action"
         uses: actions/checkout@main
+        
+      - name: create env file
+        run: |
+          touch .env
+          echo tauko='Apple' >> .env
+        working-directory: server
+        
 
       - name: "Login via Azure CLI"
         uses: azure/login@v1
